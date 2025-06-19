@@ -18,6 +18,10 @@ body.dark-mode {
   --highlight-color: #ff004f;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 /* switch */
 /* Toggle Container */
@@ -105,13 +109,11 @@ body.dark-mode .col .contents .box {
 
 /* end */
 body{
-    body {
   background-color: var(--base-color);
   color: var(--text-color);
   transition: all 0.3s ease;
 }
 
-}
 .container{
     padding: 20px 20px;
     margin-bottom: 50px;
@@ -510,6 +512,7 @@ p{
     font-size: 16px;
     font-weight: 500;
     color: #274546;
+    text-align: center;
 }
 
 
@@ -838,13 +841,20 @@ border: 4px solid #11a372;
   box-shadow: 2px 2px 42px ;
 }
 
-.copy p{
-    color: var(--base-color);
- padding-bottom: 30px;
-  text-align: center;
+.copy p {
+  max-width: 100%;
+  width: auto;
   margin: 0 auto;
-  width: 1500px;
+  padding: 0 20px 30px;
+  text-align: center;
+  color: var(--base-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
+
 
 
 .copy img{
@@ -861,8 +871,7 @@ border: 4px solid #11a372;
 /*---end-------*/
 
 
-
-@media only screen and(max-width:600px){
+@media only screen and (max-width: 600px) {
     .header-text{
         margin-top: 100%;
         font-size:16px;
@@ -1095,11 +1104,6 @@ border: 4px solid #11a372;
     padding: 0 20px 20px;
   }
   
-  .copy p{
-    width: 100%;
-    font-size: 16px;
-    padding: 0 20px 20px;
-  }
 }
 
 @media (max-width: 576px) {
