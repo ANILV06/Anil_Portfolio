@@ -14,25 +14,32 @@
         
     <body >
     <div class="container">
-        <nav>
-            <div class="logo"><span>AniL </span>Portfolio</div>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="#about">About me</a> </li>
-                <li><a href="#education">Education</a> </li>
-                <li><a href="#skill">Skill</a> </li>
-                <li><a href="#contact">Contact</a> </li>
-                <li><div class="theme-toggle">
-                    <input type="checkbox" id="darkModeToggle">
-                    <label for="darkModeToggle" class="toggle-label">
-                        <span class="icon sun">🌞</span>
-                        <span class="icon moon">🌙</span>
-                        <div class="toggle-ball"></div>
-                    </label>
-                    </div></li>
+       <nav>
+  <div class="logo"><span>AniL </span>Portfolio</div>
+  
+  <!-- Hamburger for mobile -->
+  <div class="hamburger" onclick="toggleSidebar()">☰</div>
 
-            </ul>
-        </nav>
+  <!-- Sidebar navigation -->
+  <ul class="nav-links" id="sidebar">
+    <li><a href="">Home</a></li>
+    <li><a href="#about">About me</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skill">Skill</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li>
+      <div class="theme-toggle">
+        <input type="checkbox" id="darkModeToggle" />
+        <label for="darkModeToggle" class="toggle-label">
+          <span class="icon sun">🌞</span>
+          <span class="icon moon">🌙</span>
+          <div class="toggle-ball"></div>
+        </label>
+      </div>
+    </li>
+  </ul>
+</nav>
+
 
         <div class="header-text">
            
@@ -40,7 +47,7 @@
             <h1>Hi, I'm <span>Anil V</span></h1>
              <h2 id="typewriter"></h2>
             <div class="holographic-container">
-            Hey! Take a look at my resume..<a href="" class="holographic-card">Download CV</a>
+            Hey! Take a look at my resume..<a href="" class="holographic-card">Download</a>
             </div>  
         </div>
     </div>
@@ -67,13 +74,13 @@
                 <div class="contents">
                     
                     <div class="box">
-                        <h4>2014 - 2017</h4>
+                        <h4>2017</h4>
                         <div class="hh"><h3>SSLC</h3>
                         <p>Swamy Vivekananda High School</p></div>
                     </div>
                     <br>
                     <div class="box">
-                        <h4>2017 - 2019</h4>
+                        <h4>2019</h4>
                         <div class="hh"><h3>Class 12</h3>
                         <p>Sri Devraj Urs PU College</p>
                     </div> 
@@ -139,8 +146,7 @@
                                 </div>
                                 <div class="slide slide2">
                                     <div class="content">
-                                        <h3>
-                                            Hello                    </h3>
+                                        <h3>Hello </h3>
                                         <p>"Complected Python For Data Science certification"</p>
                                     </div>
                                 </div>

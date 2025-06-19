@@ -49,3 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.toggle('dark-mode');
   });
 });
+
+
+function toggleSidebar() {
+  document.getElementById("sidebar").classList.toggle("open");
+}

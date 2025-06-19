@@ -18,10 +18,6 @@ body.dark-mode {
   --highlight-color: #ff004f;
 }
 
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
 
 /* switch */
 /* Toggle Container */
@@ -82,6 +78,11 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* Dark theme */
 
 body.dark-mode {
@@ -109,23 +110,39 @@ body.dark-mode .col .contents .box {
 
 /* end */
 body{
+    body {
   background-color: var(--base-color);
   color: var(--text-color);
   transition: all 0.3s ease;
 }
 
+}
 .container{
     padding: 20px 20px;
     margin-bottom: 50px;
     
 }
-nav{
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1001;
 }
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 
 .logo {
   position: fixed;
@@ -329,7 +346,6 @@ border-radius: 10px;
 
 .hh{
   background-color:#274546;
-  color: var(--highlight-color);
   padding-left: 9px;
   border-radius: 15px;
   
@@ -338,8 +354,25 @@ border-radius: 10px;
 .box p{
   padding-bottom: 8px;
   width: 100%;
-  text-align: left
+  text-align: left;
   
+}
+
+h3{
+  font-size: 25px;
+    font-family: 'Abel', sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 2px rgb(255, 255, 255);
+    transform: translatey(10px);
+}
+
+p{
+      font-family: 'Abel', sans-serif;
+    color: white;
+    text-align: center;
+    width: 220px;
+    transform: translatex(12px);
+    padding-top: 20px;
 }
 
 /*----------end----------*/
@@ -365,42 +398,36 @@ border-radius: 10px;
   text-align:center;
   left: 200px;
   width: 250px;
-  height: 350px;
+  height: 380px;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   background: linear-gradient(rgb(225,150,58),rgb(227,144,91));
-  transition:.6s;
-  
-  transform: rotatex(75deg) translatey(200px) translatez(px);
   box-shadow: 0px 20px 60px rgba(0,0,0, 0.5);
+  
 }
-.card1:hover{
-  transform: rotatex(0deg);
-  transform: rotatez(0deg);
-  transition:.6s;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-}
+
 .card1 img{
   transform: translateY(15px);
   width:200px;
   height:120px;
 }
-h3{
-  font-size:25px;
-  font-family: 'Abel', sans-serif;
-  color:rgb(255,255,255);
-  text-shadow: 0 0 2px rgb(255,255,255);
-  transform: translatey(10px);
+.card1 h3,
+.card1 p {
+  transform: none; /* Removes any offset */
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  max-width: 220px;
+  color: white;
+  padding-top: 10px;
+  
 }
 
-p{
+.card1 p {
+  padding-top: 15px;
+  font-size: 16px;
+  line-height: 1.4;
   
-  font-family: 'Abel', sans-serif;
-  color: white;
-  text-align:center;
-  width:220px;
-  transform: translatex(12px);
-  padding-top: 20px ;
 }
 
 
@@ -408,48 +435,66 @@ p{
   text-align:center;
   left: 700px;
   width: 250px;
-  height: 350px;
+  height: 380px;
   margin-top: 10px;
   margin-bottom: 10px;
   background: linear-gradient(rgb(93,94,170),rgb(93,66,103));
   animation: animate 1s linear infinite;
-  transition:.6s;
-  
-  transform: rotatex(75deg) translatey(-200px) translatez(px);
-  box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
-}
-.card2:hover{
-   transform: rotatex(0deg);
-  transition:.6s;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+
 }
 .card2 img{
   transform: translateY(15px);
   width:180px;
   height:150px;
 }
+.card2 h3,
+.card2 p {
+  transform: none; /* Removes any offset */
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  max-width: 220px;
+  color: white;
+  padding-top: 10px;
+  
+}
+
+.card2 p {
+  padding-top: 15px;
+  font-size: 16px;
+  line-height: 1.4;
+}
 .card3 {
   text-align:center;
   left: 1150px;
   width: 250px;
-  height: 350px;
+  height: 380px;
   margin-top: 10px;
   margin-bottom: 10px;
   background: linear-gradient(#ff5252, #b33939);
-  transition:.6s;
-  
-  transform: rotatex(75deg) translatey(-200px) translatez(px);
-  box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.5);
-}
-.card3:hover{
-   transform: rotatex(0deg);
-  transition:.6s;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+
 }
 .card3 img{
   transform: translateY(15px);
   width:200px;
   height:120px;
+}
+
+.card3 h3,
+.card3 p {
+  transform: none; /* Removes any offset */
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  max-width: 220px;
+  color: white;
+  padding-top: 10px;
+}
+
+.card3 p {
+  padding-top: 15px;
+  font-size: 16px;
+  line-height: 1.4;
 }
 .footer{
   position: absolute;
@@ -512,7 +557,6 @@ p{
     font-size: 16px;
     font-weight: 500;
     color: #274546;
-    text-align: center;
 }
 
 
@@ -771,7 +815,7 @@ border: 4px solid #11a372;
     margin: 0;
     padding: 0;
     text-align: center;
-    color: #414141;
+    color: var(--text-color)
 
 }
 
@@ -780,7 +824,7 @@ border: 4px solid #11a372;
     padding: 0;
     font-size: 24px;
     text-align: center;
-    color: #414141;
+    color: var(--text-color);
 
 } 
 
@@ -844,13 +888,11 @@ border: 4px solid #11a372;
 .copy p {
   max-width: 100%;
   width: auto;
-  margin: 0 auto;
   padding: 0 20px 30px;
-  text-align: center;
-  color: var(--base-color);
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
 }
@@ -871,7 +913,8 @@ border: 4px solid #11a372;
 /*---end-------*/
 
 
-@media only screen and (max-width: 600px) {
+
+@media only screen and(max-width:600px){
     .header-text{
         margin-top: 100%;
         font-size:16px;
@@ -1104,6 +1147,11 @@ border: 4px solid #11a372;
     padding: 0 20px 20px;
   }
   
+  .copy p{
+    width: 100%;
+    font-size: 16px;
+    padding: 0 20px 20px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1139,5 +1187,35 @@ border: 4px solid #11a372;
   .copy p img {
     width: 16px;
     height: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 250px;
+    background-color: var(--base-color);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 20px;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+  }
+
+  .hamburger {
+    display: block;
   }
 }
